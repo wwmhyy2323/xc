@@ -30,3 +30,6 @@ logs/
 
 ### VS Code ###
 .vscode/
+/xuecheng-plus-gateway/target/classes/com/xuecheng/GatewayApplication.class
+/xuecheng-plus-gateway/target/classes/bootstrap.yml
+/xuecheng-plus-gateway/target/classes/log4j2-dev.xml
