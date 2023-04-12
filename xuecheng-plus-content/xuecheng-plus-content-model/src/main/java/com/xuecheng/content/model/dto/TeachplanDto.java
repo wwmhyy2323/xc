@@ -16,9 +16,9 @@ import java.util.List;
 @Data
 @ToString
 public class TeachplanDto extends Teachplan {
-    //与媒资管理的信息
-    private TeachplanMedia teachplanMedia;
+  //与媒资管理的信息
+   private TeachplanMedia teachplanMedia;
 
-    //小章节list
-    private List<TeachplanDto> teachPlanTreeNodes;
+  //小章节list
+   private List<TeachplanDto> teachPlanTreeNodes;
 }

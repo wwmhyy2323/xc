@@ -1,6 +1,5 @@
 package com.xuecheng.media.api;
 
-import com.xuecheng.base.exception.XueChengPlusException;
 import com.xuecheng.base.model.PageParams;
 import com.xuecheng.base.model.PageResult;
 import com.xuecheng.media.model.dto.QueryMediaParamsDto;
@@ -24,8 +23,7 @@ import java.io.IOException;
  * @description 媒资文件管理接口
  * @date 2022/9/6 11:29
  */
-
-@Api(value = "媒资文件管理接口",tags = "媒资文件管理接口")
+@Api(value = "媒资文件管理接口", tags = "媒资文件管理接口")
 @RestController
 public class MediaFilesController {
 
@@ -36,14 +34,14 @@ public class MediaFilesController {
 
     @ApiOperation("媒资列表查询接口")
     @PostMapping("/files")
-    public PageResult<MediaFiles> list(PageParams pageParams, @RequestBody QueryMediaParamsDto queryMediaParamsDto){
+    public PageResult<MediaFiles> list(PageParams pageParams, @RequestBody QueryMediaParamsDto queryMediaParamsDto) {
         Long companyId = 1232141425L;
-        return mediaFileService.queryMediaFiels(companyId,pageParams,queryMediaParamsDto);
+        return mediaFileService.queryMediaFiels(companyId, pageParams, queryMediaParamsDto);
 
     }
 
     @ApiOperation("上传图片")
-    @RequestMapping(value = "/upload/coursefile",consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @RequestMapping(value = "/upload/coursefile", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public UploadFileResultDto upload(@RequestPart("filedata") MultipartFile filedata) throws IOException {
 
         //准备上传文件的信息
